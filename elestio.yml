@@ -6,6 +6,8 @@ config:
   buildDir: "dist"
   runCommand: "npm run develop"
   installCommand: "npm install"
+  icon: "src/favicon.png"
+  screenshot: "src/screenshot.png"
 ports:
   - protocol: "HTTPS"
     targetProtocol: "HTTP"
@@ -25,3 +27,6 @@ exposedPorts:
 environments:
   - key: "ENV"
     value: "production"
+webUI:
+  - url: "https://[CI_CD_DOMAIN]"
+    label: "Website"    
